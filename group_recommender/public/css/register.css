@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(../img/pizza01.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: sans-serif;
+    margin-top: 225px;
+}
+
+.regform{
+    width:800px;
+    background-color: rgb(0,0,0,6);
+    margin:auto;
+    color: white;
+    padding: 10px 0px 10px 0px;
+    text-align: center;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.main{
+    background-color: rgb(0,0,0,0.5);
+    width: 800px;
+    margin: auto;
+}
+
+form{
+    padding: 10px;
+}
+
+
+
+.name{
+    margin-left: 25px;
+    margin-top: 30px;
+    width: 125px;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.firstname{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    border-radius: 6px;
+    padding:0 22px;
+    font-size: 16;
+}
+
+.email{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 500px;
+    border-radius:6px;
+    padding: 0 22px;
+    font-size: 16;
+}
+
+.password{
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 500px;
+    border-radius:6px;
+    padding: 0 22px;
+    font-size: 16;
+}
+.confirm{
+    margin-top: 10px;
+    position: relative;
+    left: 200px;
+    top: -37px;
+    line-height: 40px;
+    width: 500px;
+    border-radius:6px;
+    padding: 0 22px;
+    font-size: 16;
+}
+
+.register input{
+    border-radius:6px;
+    font-size: 16;
+    width: 150px;
+    height: 50px;
+    margin-left: 600px;
+}
+
+.login{
+    margin-top: 10px;
+    font-size: 16;
+    padding-right: 30px;
+    text-align: right;
+    color: white;
+}
+
+.login a{
+    color: yellow;
+}
+
+.error{
+    position: relative;
+    padding: 30px 0px 0px 55px;
+    color: #fff;
+    font-weight: 900;
+}
+
+.list li{
+    list-style: none;
+}

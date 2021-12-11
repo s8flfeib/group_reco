@@ -1,0 +1,150 @@
+html,
+body {
+  height: 99%;
+  width: 99.6%;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: black;
+  background-color: ivory;
+}
+.page {
+  position: relative;
+  min-height: 100%;
+  min-width: 100%;
+  /* background-color: salmon; */
+}
+/************* Kopfzeile *************/
+.header {
+  height: 75px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+  max-width: 100%;
+}
+.innerHead {
+  height: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  background-color: grey;
+  max-width: 95%;
+}
+.WebsiteName {
+  height: 100%;
+  display: table;
+  float: left;
+}
+.WebsiteName h1 {
+  color: gold;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Open Sans Condensed";
+  font-size: 32px;
+  font-weight: 320px;
+}
+.WebsiteName h1 span {
+  color: white;
+  font-weight: 800px;
+}
+.nav {
+  float: right;
+  height: 100%;
+}
+.nav a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+  vertical-align: middle;
+  max-width: 90%;
+}
+.nav a li {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: gold;
+  font-size: 18px;
+  justify-content: flex-end;
+  vertical-align: middle;
+  max-width: 90%;
+}
+
+/************* Text *************/
+.text {
+  /* background-color: rgb(233, 151, 92); */
+  color: black;
+  position: relative;
+  width: 50%;
+  height: 750px;
+  font-size: medium;
+  text-align: justify;
+}
+.idea {
+  height: 50px;
+}
+.description {
+  margin-top: 100px;
+}
+
+/************* Bilder *************/
+.img {
+  /* background-color: pink; */
+  width: 49%;
+  height: 80.5%;
+  position: absolute;
+  right: 10px;
+  top: 100px;
+}
+.picture01 {
+  height: 300px;
+  position: absolute;
+  left: 10%;
+}
+.picture02 {
+  height: 300px;
+  position: absolute;
+  top: 49%;
+  left: 13%;
+}
+
+/************* Fusszeile *************/
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 99.7%;
+  background-color: grey;
+  color: gold;
+  text-align: center;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+}
+
+.restaurants {
+  position: relative;
+  width: 100%;
+  height: 43%;
+  /* background-color: aqua; */
+  padding-top: 20px;
+  font-size: large;
+}
+.restaurants .first {
+  position: absolute;
+}
+.restaurants .first ul li {
+  margin-top: 5px;
+}
+
+.restaurants .second {
+  position: absolute;
+
+  padding-left: 300px;
+}
+.restaurants .second ul li {
+  margin-top: 5px;
+}

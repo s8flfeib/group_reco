@@ -1,0 +1,18 @@
+# [stage 1: create image: interim:1.0] # FROM nikolaik/python-nodejs:python3.8-nodejs15
+# [stage 2: create image: req:1.0]     # FROM interim:1.0
+# [stage 3: create image: app:1.0]     # FROM req:1.0
+FROM req:1.0
+
+# [stage 1: create image: interim:1.0] # 
+WORKDIR /home/app
+COPY . /home/app
+COPY .env.appcontainer2dbcontainer .env
+RUN apt-get update -y
+
+# [stage 2: create image: req:1.0]     # 
+RUN pip install --upgrade -r requirements.venv2.baseline.txt
+
+# [stage 3: create image: app:1.0]     # 
+RUN npm install --python=python3.8
+EXPOSE 4000
+CMD [ "npm", "start" ]

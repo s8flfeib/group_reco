@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/initial_login.css"/>
+        <meta name="viewport" content="width = device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie = edge"/>
+        <title>Grading</title>
+  
+</head>
+    
+
+<body> 
+    <div class = "header">
+        <div class= "innerHead">
+            <div class = "WebsiteName">
+                <h1>Group<span>Recommender</span></h1>
+            </div>
+            <ul class = "nav">
+                <a href="/users/login"><li>Login</li></a>
+            </ul>   <!-- HIER Endet die Menüzeile-->
+        </div>    
+    </div>  
+
+    <div class = "results">
+        <h1>Grading Restaurants</h1>
+        <p>Thank you for Grading Restaurants with this Data we are able to give you better Recomendations</p>
+        <p>Ratings range from 1 to 5 please use 0 if you don't know the place </p>
+    </div>       
+
+  
+<form action="/users/gradingsuccess" method="get">
+    <div class = "grading">
+        <div class="block_1">
+            <label>LOsteria:</label>
+            <input class="rating" type="text" maxlength="1" id = "number1" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Burger Mafia:</label>
+            <input class="rating" type="text" maxlength="1" id = "number2" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Hashimoto:</label>
+            <input class="rating" type="text" maxlength="1" id = "number3" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>LaBastille:</label>
+            <input class="rating" type="text" maxlength="1" id = "number4" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Osaka:</label>
+            <input class="rating" type="text" maxlength="1" id = "number5" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Kura Thai:</label>
+            <input class="rating" type="text" maxlength="1" id = "number6" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Okinii:</label>
+            <input class="rating" type="text" maxlength="1" id = "number7" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Asia Restaurant:</label>
+            <input class="rating" type="text" maxlength="1" id = "number8" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Ristorante Roma:</label>
+            <input class="rating" type="text" maxlength="1" id = "number9" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>PaoloTonio:</label>
+            <input class="rating" type="text" maxlength="1" id = "number10" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>           
+        </div>
+        <div class="block_2">
+            <label>Aryan Grill / ParkhausGrill:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number11" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Die Kartoffel:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number12" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Buffalo Steakhaus:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number13" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>ElSombrero:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number14" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Das Falmmkuchenhaus:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number15" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Cafe Especial :</label>
+            <input class="rating" type="text"  maxlength="1" id = "number16" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Vapiano:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number17" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Burgerrei:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number18" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>SaarKebab:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number19" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+            <label>Kalinski:</label>
+            <input class="rating" type="text"  maxlength="1" id = "number20" name="Input" placeholder="Rating" onkeyup="nbrsonly(this)"/><br><br>
+        </div>
+  
+        <button class="button" style="vertical-align:middle"><span>Submit </span></button>
+    </div>
+</form>
+
+<footer>
+    <p>Universität des Saarlandes</p>
+</footer>   
+
+<script>        //Verhindert invalide Eingabe
+    function nbrsonly(input){
+       var regex = /[^0-5]/gi;
+       input.value = input.value.replace(regex,"");    
+    }
+</script>
+</body>
+</html>

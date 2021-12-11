@@ -1,0 +1,15 @@
+#version and services are allways there
+version: '3'
+services:
+    # = container name when create
+    postgreSQL:
+        #container cofig inside here
+        image: database:3.0
+        ports:
+            - 5732:5432
+    node-express:
+        image: app:3.0
+        ports:
+            - 3000:4000
+
+

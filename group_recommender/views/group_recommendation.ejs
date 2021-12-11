@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+        <meta charset="UTF-8"/>
+        <link rel="stylesheet" href="../css/group_recommendation.css"/>
+        <meta name="viewport" content="width = device-width, initial-scale=1.0"/>
+        <meta http-equiv="X-UA-Compatible" content="ie = edge"/>
+        <title>Dashboard</title>
+  
+</head>
+    
+
+<body>  
+             <!-- HIER BEGINNT die Menüzeile--> 
+<div class = "header">
+    <div class= "innerHead">
+        <div class = "WebsiteName">
+            <h1>Group<span>Recommender</span></h1>
+        </div>
+        <ul class = "nav">
+            <a href="/users/dashboard"><li>Home</li></a>
+            <a href="/users/logout"><li>Logout</li></a>
+            <a href="/users/update_gradings"><li>Grading</li></a>
+        </ul>   <!-- HIER Endet die Menüzeile-->
+    </div>  
+</div>
+<div class= "text"><h1 class="bon">Bon Appetit</h1></div>     
+            
+            <!-- <div class = "picture">
+                <img src="Node login\public\img\picture.jpg" /> -->
+            
+            <div class = "container">    
+                <h2 class="des">Here is a collection of restaurants that you all might like!</h2>
+                <div class = "box1">
+                    <h2 class="res">Top Result:</h2>
+                    <h2><%= first_restaurant %></h3>
+                    <h3><%= first_decp %></h4>
+                    <h3>See here:</h4> 
+                    <a href= <%= first_link %>> <%= first_restaurant %> </a>
+                    
+                </div>
+                <div class = "box2">
+                    <h2 class="res">2nd best Result:</h2>
+                    <h2><%= second_restaurant %></h3>                    
+                    <h3><%= second_decp %></h4>                    
+                    <h3>See here:</h4>
+                    <a href=<%= second_link %>> <%= second_restaurant %> </a>
+                    <!-- <a href="https://losteria.net/de/speisekarte/pizza/"><li>L'Osteria</li></a> -->
+                </div>
+                <div class = "box3">
+                    <h2>Wanna try something new?</h2>
+                    <p>... work in progress</p>
+                    <!-- <a href="https://losteria.net/de/speisekarte/pizza/"><li>L'Osteria</li></a> -->
+                </div>
+                
+            </div>  
+        <!-- </div>      -->
+        <br>
+        <div class="thanks">
+            <h2>Thank you for using our recommender!</h2>
+            <h2>We hope you are happy!</h2>
+        </div>
+        
+        
+                
+            
+<footer>
+    <p>Universität des Saarlandes</p>
+</footer>         
+         
+</body>
+  
+    
+    
+    
+</html>

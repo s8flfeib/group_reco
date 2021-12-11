@@ -1,0 +1,157 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    background-color: ivory;
+}
+/************* Kopfzeile *************/
+.header {
+    height: 75px;
+    display: block;
+    background-color: black;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    max-width: 100%;
+}
+.innerHead {
+    height: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    margin: 0 auto;
+    background-color: grey;
+    max-width: 95%;
+}
+.WebsiteName {
+    height: 100%;
+    display: table;
+    float: left;
+}
+.WebsiteName h1 {
+    color: gold;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: "Open Sans Condensed";
+    font-size: 32px;
+    font-weight: 320px;
+}
+.WebsiteName h1 span {
+    color: white;
+    font-weight: 800px;
+}
+.nav {
+    float: right;
+    height: 100%;
+}
+.nav a {
+    height: 100%;
+    display: table;
+    float: left;
+    padding: 0px 20px;
+    vertical-align: middle;
+    max-width: 90%;
+}
+.nav a li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100%;
+    color: gold;
+    font-size: 18px;
+    justify-content: flex-end;
+    vertical-align: middle;
+    max-width: 90%;
+}
+/************* BOX *************/
+.results{
+    margin-left: 25px;
+}
+
+.grading{
+    height: 550px;
+    padding: 20px;
+}
+
+
+.grading .block_1{
+    /* float: left; sorgt dafür, dass alle divs nebeneinander von links aneinander gereit werden */
+    float: left;  
+    padding: 20px;
+    margin-right: 6.0%;
+    width: 30%;
+    background-color: silver;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+}
+.grading .block_2{
+    /* float: left; sorgt dafür, dass alle divs nebeneinander von links aneinander gereit werden */
+    float: left;
+    padding: 20px;
+    margin-right: 2.0%;
+    width: 30%;
+    background-color: silver;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+}
+form label{
+    float: left;
+    margin-right: 50px;
+    line-height: 200%;
+}
+form input{
+    float: right;
+    line-height: 200%;
+}
+
+/************* Button *************/
+.button {
+    display: inline-block;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+    background-color: silver;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-top: 384px;
+}
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.button:hover span {
+    padding-right: 25px;
+}
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+/************* Fusszeile *************/
+footer {
+    position: fixed;
+    bottom: 5px;
+    width: 98.5%;
+    background-color: grey;
+    color: gold;
+    text-align: center;
+    border-radius: 10px;
+    border-color: black;
+    border-style: solid;
+  }

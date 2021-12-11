@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="../css/update_gradings.css"/>
+    <meta name="viewport" content="width = device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie = edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grading</title>
+</head>
+    
+<body>
+
+        <!-- HIER BEGINNT die Menüzeile--> 
+    <div class = "header">
+        <div class= "innerHead">
+            <div class = "WebsiteName">
+                <h1>GroupRecommender</h1>
+            </div>
+        <ul class = "nav">
+            <a href="/users/dashboard"><li>Home</li></a>
+            <a href="/users/logout"><li>Logout</li></a>
+           
+        </ul>   <!-- HIER Endet die Menüzeile-->
+    </div>  
+
+    <form name="Testform" action="/users/singleGrading" method="get">
+        <label class="label">Please rate your restaurant:</label>
+        <div class="selection">
+            <select name="Restaurant" size="1" id="RestaurantName">
+                <% restaurants.forEach(function(restaurant) { %>
+                     <option value="<%= restaurant.name %>"><%= restaurant.name %> (<%= restaurant.grading %>)</option>
+                <% }); %>
+            </select>
+        </div>
+
+        <script>
+            $(document).ready(function () {
+                var bewertung =(<%-JSON.stringify(restaurants)%>)[0].grading 
+                $('#number1').val(bewertung)
+                $("#RestaurantName").change(function () {
+                   var value =  $("#RestaurantName")[0].selectedIndex
+                   var bewertung =(<%-JSON.stringify(restaurants)%>)[value].grading
+                   $('#number1').val(bewertung)  
+                });
+            });
+             
+        </script>
+
+
+        <input class="rating" id = "number1" name="Input" onkeyup="nbrsonly(this)" maxlength="1"  required />
+        <button class="submit" type="submit" onclick="submitted()">Submit</button>
+         
+    </form>
+
+    <div class = "info">
+    <h2>Info</h2>
+    <p>On this page you see a drop down menu with the restaurants the number next to the name is your current Rating for that Restaurant</p>
+
+    </div>
+
+
+
+    
+    <script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+    
+    // function filterFunction() {
+    //   var input, filter, ul, li, a, i;
+    //   input = document.getElementById("myInput");
+    //   filter = input.value.toUpperCase();
+    //   div = document.getElementById("myDropdown");
+    //   a = div.getElementsByTagName("a");
+    //   for (i = 0; i < a.length; i++) {
+    //     txtValue = a[i].textContent || a[i].innerText;
+    //     if (txtValue.toUpperCase().indexOf(filter) > -1) {
+    //       a[i].style.display = "";
+    //     } else {
+    //       a[i].style.display = "none";
+    //     }
+    //   }
+    // }
+
+    'use strict';
+    document.addEventListener('DOMContentLoaded', function () {
+        document.Testform.Restaurant.addEventListener('change', CheckAuswahl);
+
+        function CheckAuswahl() {
+            var menu = document.Testform.Restaurant;
+            document.querySelector('output')
+                .innerHTML = menu.options[menu.selectedIndex].value;
+        }
+    });
+
+    function nbrsonly(input){
+           var regex = /[^0-5]/gi;
+           input.value = input.value.replace(regex,"");    
+        }
+    </script>
+<footer>
+    <p>Universität des Saarlandes</p>
+</footer>  
+</body>
+</html>
+    
+    

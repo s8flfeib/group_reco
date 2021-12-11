@@ -1,0 +1,246 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: medium;
+  background-color: ivory;
+}
+/************* Kopfzeile *************/
+.header {
+  height: 75px;
+  display: block;
+  background-color: black;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+  max-width: 100%;
+}
+.innerHead {
+  height: 100%;
+  border-radius: 10px;
+  margin: 0 auto;
+  display: block;
+  margin: 0 auto;
+  background-color: grey;
+  max-width: 95%;
+}
+.WebsiteName {
+  height: 100%;
+  display: table;
+  float: left;
+}
+.WebsiteName h1 {
+  color: gold;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: "Open Sans Condensed";
+  font-size: 32px;
+  font-weight: 320px;
+}
+.WebsiteName h1 span {
+  color: white;
+  font-weight: 800px;
+}
+.nav {
+  float: right;
+  height: 100%;
+}
+.nav a {
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 0px 20px;
+  vertical-align: middle;
+  max-width: 90%;
+}
+.nav a li {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  color: gold;
+  font-size: 18px;
+  justify-content: flex-end;
+  vertical-align: middle;
+  max-width: 90%;
+}
+
+/********* Menu *********/
+.dropbtn {
+  background-color: #000;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 300px;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: grey;
+}
+
+#myInput {
+  box-sizing: border-box;
+  background-image: url(../img/searchicon.png);
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+.dropdown {
+  top: 100px;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  overflow: auto;
+  border: 1px solid #ddd;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* Select Menu */
+form {
+  /* margin-top: 100px;
+  padding-left: 25%;
+  padding-right: 25%; */
+
+  /* Falls alles Linksbündig soll  */
+    padding: 50px 50px 50px 0px;
+    /* background-color: yellow; */
+}
+.selection {
+  width: 100%;
+  /* background-color: blueviolet; */
+  padding: 20px 20px 20px 0px;
+  margin-top: 25px;
+}
+.input {
+  width: 100%;
+  /* background-color: green;  */
+  padding: 5px 20px 20px 0px;
+}
+.rating {
+  /* background-color: blue; */
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.submit {
+  display: inline-block;
+  padding: 10px 15px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.label {
+  /* background-color: yellowgreen; */
+  font-size: 28px;
+  text-decoration: underline;
+  text-decoration-color: black;
+  font-weight: 600;
+}
+select {
+  display: block;
+  font-size: 1.5em;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  width: 20em;
+  max-width: 100%;
+  /* useful when width is set to anything other than 100% */
+
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid #aaa;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.04);
+  border-radius: 0.5em;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  /* note: bg image below uses 2 urls. The first is an svg data uri for the arrow icon, and the second is the gradient. 
+        for the icon, if you want to change the color, be sure to use `%23` instead of `#`, since it's a url. You can also swap in a different svg icon or an external image reference
+    */
+
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E"),
+    linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+
+  background-position: right 0.7em top 50%, 0 0;
+  /* icon size, then gradient */
+
+  background-size: 0.65em auto, 100%;
+}
+/* Hide arrow icon in IE browsers */
+
+select::-ms-expand {
+  display: none;
+}
+/* Hover style */
+
+select:hover {
+  border-color: #888;
+}
+
+select > *:hover {
+  background-color: #dfac20;
+}
+/* Focus style */
+
+select:focus {
+  border-color: #aaa;
+  /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+
+  box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+  box-shadow: 0 0 0 3px -moz-mac-focusring;
+  color: #222;
+  outline: none;
+}
+/* Set options to normal weight */
+
+select option {
+  font-weight: normal;
+}
+
+output {
+  font-family: courier;
+  font-size: 2em;
+  color: #c32e04;
+}
+/************* Fusszeile *************/
+footer {
+  position: absolute;
+  bottom: 5px;
+  width: 98.5%;
+  background-color: grey;
+  color: gold;
+  text-align: center;
+  border-radius: 10px;
+  border-color: black;
+  border-style: solid;
+}
